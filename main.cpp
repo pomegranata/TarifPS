@@ -5,10 +5,9 @@ using namespace std;
 int main()
 {
     string ps;
-    int jam, mnt, durasi, bayar, jam_ht, menit_ht, durasi_ht, jam_bts, menit_bts;
-    char paket;
+    int jam, mnt, paket, durasi, bayar, jam_ht, menit_ht, durasi_ht, jam_bts, menit_bts;
 
-
+    cout << "Silahkan pilih paket: " << endl;
     cout << "------------------------------------------------------------------------" << endl;
     cout << "   Paket  |   PS 3    |   PS 4    |   PS 5    |   Durasi   |   Bonus   |" << endl;
     cout << "------------------------------------------------------------------------" << endl;
@@ -37,73 +36,77 @@ int main()
 
     if (ps == "PS3")
     {
-        if (paket == '1')
+        if (paket == 1)
         {
             durasi = 60;
             bayar = 5000;
         }
-        else if (paket == '2' )
+        else if (paket == 2 )
         {
             durasi = 140;
             bayar = 10000;
         }
-        else if (paket == '3')
+        else if (paket == 3)
         {
             durasi = 210;
             bayar = 15000;
         }
         else
         {
-            cout << "Paket tidak tersedia" << endl;
+            cout << "\nPaket tidak tersedia" << endl;
+            exit(0);
         }
     }
     else if (ps == "PS4")
     {
-        if (paket == '1')
+        if (paket == 1)
         {
             durasi = 60;
             bayar = 7000;
         }
-        else if (paket == '2' )
+        else if (paket == 2)
         {
             durasi = 140;
             bayar = 14000;
         }
-        else if (paket == '3')
+        else if (paket == 3)
         {
             durasi = 210;
             bayar = 20000;
         }
         else
         {
-            cout << "Paket tidak tersedia" << endl;
+            cout << "\nPaket tidak tersedia" << endl;
+            exit(0);
         }
     }
     else if (ps == "PS5")
     {
-        if (paket == '1')
+        if (paket == 1)
         {
             durasi = 60;
-            bayar = 5000;
-        }
-        else if (paket == '2' )
-        {
-            durasi = 140;
             bayar = 10000;
         }
-        else if (paket == '3')
+        else if (paket == 2)
+        {
+            durasi = 140;
+            bayar = 20000;
+        }
+        else if (paket == 3)
         {
             durasi = 210;
-            bayar = 15000;
+            bayar = 27000;
         }
         else
         {
-            cout << "Paket tidak tersedia" << endl;
+            cout << "\nPaket tidak tersedia" << endl;
+            exit(0);
         }
     }
     else
     {
-        cout << "PS tidak tersedia" << endl;
+        cout << "\nPS tidak tersedia" << endl;
+        exit(0);
     }
 
     jam_ht = jam * 60;
